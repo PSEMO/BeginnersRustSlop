@@ -5,7 +5,7 @@
 ### I did not
 * use any ai,
 * use any IDE extension,
-* use any tutorial,
+* follow any extra tutorial,
 * had any knowledge about Rust prior to this
 ### I only
 * used a Terminal (Konsole),
