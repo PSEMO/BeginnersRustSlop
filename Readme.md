@@ -16,4 +16,4 @@ This repo contains the things I wrote whilst reading "The Rust Programming Langu
 
 
 ## ------Disclaimer------
-I only used AI to create exercises (homeworks) for me to solve.
+I used AI to create exercises (homeworks) for me to solve.
