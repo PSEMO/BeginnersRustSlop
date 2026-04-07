@@ -16,4 +16,4 @@
 
 
 ## ------Disclaimer------
-Yes, I used AI to create exercises (homeworks) for me to solve, only the exercise part was created with AI.
+I only used AI to create exercises (homeworks) for me to solve.
