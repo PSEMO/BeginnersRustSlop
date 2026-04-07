@@ -1,11 +1,11 @@
 # This is pure, unadulterated, human slop!
 
-## These are the things I wrote whilst reading "The Rust Programming Language"
+This repo contains the things I wrote whilst reading "The Rust Programming Language"
 
 ### I did not
 * use any ai,
-* any IDE extension,
-* any tutorial,
+* use any IDE extension,
+* follow any extra tutorial,
 * had any knowledge about Rust prior to this
 ### I only
 * used a Terminal (Konsole),
@@ -13,5 +13,7 @@
 * used VS Code (just to edit text)
 
 
+
+
 ## ------Disclaimer------
-### I used AI to create exercises.
+I used AI to create exercises (homeworks) for me to solve.
