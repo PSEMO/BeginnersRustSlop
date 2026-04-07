@@ -1,6 +1,6 @@
 # This is pure, unadulterated, human slop!
 
-### These are the things I wrote whilst reading "The Rust Programming Language"
+### This repo contains the things I wrote whilst reading "The Rust Programming Language"
 
 ### I did not
 * use any ai,
@@ -11,6 +11,8 @@
 * used a Terminal (Konsole),
 * read the book (https://doc.rust-lang.org/stable/book/),
 * used VS Code (just to edit text)
+
+
 
 
 ## ------Disclaimer------
