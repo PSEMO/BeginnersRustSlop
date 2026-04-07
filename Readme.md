@@ -1,6 +1,6 @@
 # This is pure, unadulterated, human slop!
 
-### This repo contains the things I wrote whilst reading "The Rust Programming Language"
+This repo contains the things I wrote whilst reading "The Rust Programming Language"
 
 ### I did not
 * use any ai,
