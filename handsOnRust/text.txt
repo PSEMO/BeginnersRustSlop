@@ -1,0 +1,163 @@
+*******************first 5 exercise*******************
+
+Prompt I gave:
+
+==========
+I have read this much of the Rust book
+
+<ol class="chapter"><a href="title-page.html">The Rust Programming Language</a><a href="foreword.html">Foreword</a><a href="ch00-00-introduction.html">Introduction</a><a href="ch01-00-getting-started.html">1. Getting Started</a><ol class="section"><a href="ch01-01-installation.html">1.1. Installation</a><a href="ch01-02-hello-world.html">1.2. Hello, World!</a><a href="ch01-03-hello-cargo.html">1.3. Hello, Cargo!</a></ol></li><a href="ch02-00-guessing-game-tutorial.html">2. Programming a Guessing Game</a><a href="ch03-00-common-programming-concepts.html">3. Common Programming Concepts</a><ol class="section"><a href="ch03-01-variables-and-mutability.html">3.1. Variables and Mutability</a><a href="ch03-02-data-types.html">3.2. Data Types</a><a href="ch03-03-how-functions-work.html">3.3. Functions</a><a href="ch03-04-comments.html">3.4. Comments</a><a href="ch03-05-control-flow.html">3.5. Control Flow</a></ol></li><a href="ch04-00-understanding-ownership.html">4. Understanding Ownership</a><ol class="section"><a href="ch04-01-what-is-ownership.html">4.1. What is Ownership?</a><a href="ch04-02-references-and-borrowing.html">4.2. References and Borrowing</a><a href="ch04-03-slices.html">4.3. The Slice Type</a></ol></li><li class="chapter-item expanded"><a href="ch05-00-structs.html">5. Using Structs to Structure Related Data</a><ol class="section"><li class="chapter-item expanded"><a href="ch05-01-defining-structs.html" class="active">5.1. Defining and Instantiating Structs</a><div class="on-this-page"><ol class="section"><li class="header-item expanded"><a href="#defining-and-instantiating-structs" class="header-in-summary">Defining and Instantiating Structs</a><ol class="section"><li class="header-item expanded"><a href="#using-the-field-init-shorthand" class="header-in-summary">Using the Field Init Shorthand</a><li class="header-item expanded"><a href="#creating-instances-with-struct-update-syntax" class="header-in-summary current-header">Creating Instances with Struct Update Syntax</a><li class="header-item expanded"><a href="#creating-different-types-with-tuple-structs" class="header-in-summary">Creating Different Types with Tuple Structs</a><li class="header-item expanded"><a href="#defining-unit-like-structs" class="header-in-summary">Defining Unit-Like Structs</a><li class="header-item expanded"><a href="#ownership-of-struct-data" class="header-in-summary">Ownership of Struct Data</a></ol></li></ol></div></li><a href="ch05-02-example-structs.html">5.2. An Example Program Using Structs</a><a href="ch05-03-method-syntax.html">5.3. Methods</a></ol></li><a href="ch06-00-enums.html">
+
+recommend me 5 practice homeworks that encapsulates everything I have learned
+==========
+
+------------------------------------------------------
+
+Answer I got:
+
+==========
+Congratulations on finishing Chapter 5! You have reached a major milestone. You now understand Ownership, Borrowing, Slices, and Structs with Methods. This is the "core" of Rust.
+
+Here are 5 practice homework assignments designed to test these specific skills. They start with basic struct usage and end with complex ownership and slice management.
+
+1. The Grade Tracker (Basic Structs & Methods)
+
+Goal: Create a struct and use basic &self methods.
+
+Create a struct Student with fields: name (String), score (u32).
+
+Implement a method is_passing(&self) -> bool that returns true if the score is 70 or higher.
+
+Implement a method give_extra_credit(&mut self, amount: u32) that increases the score (clamped at 100).
+
+Bonus: In main, create a vector of 3 students and use a loop to print which ones passed.
+
+2. The Digital Wallet (Mutability & Logic)
+
+Goal: Master &mut self and conditional logic inside methods.
+
+Create a struct Wallet with a field balance (f64).
+
+Implement an associated function (static method) new(start_balance: f64) -> Wallet to initialize it.
+
+Implement deposit(&mut self, amount: f64).
+
+Implement withdraw(&mut self, amount: f64) -> bool. It should only deduct money if the balance is sufficient and return true. If insufficient, return false and don’t change the balance.
+
+Constraint: Ensure your program handles the case where someone tries to withdraw a negative amount.
+
+3. The Rectangle Overlap (Interaction Between Structs)
+
+Goal: Learn how to pass one struct into another struct's method by reference.
+
+Create a struct Rectangle with width and height (u32).
+
+Implement a method area(&self) -> u32.
+
+Implement a method can_hold(&self, other: &Rectangle) -> bool. This should return true if the current rectangle is strictly larger in both width and height than the other rectangle.
+
+Challenge: Implement a method scale(&mut self, factor: u32) that multiplies both dimensions.
+
+4. The Library System (Ownership & References)
+
+Goal: Understand how structs handle owned Strings and how to compare them.
+
+Create a struct Book with title (String) and is_available (bool).
+
+Implement a method borrow_book(&mut self). If the book is available, set it to false and print "Success". If not, print "Already out".
+
+Implement a method return_book(&mut self).
+
+Implement a method matches_title(&self, search: &str) -> bool. Use this to check if a search string matches the title.
+
+Question to solve: In main, if you move a Book into a function, can you still use it in main? Prove it with code.
+
+5. The "Text Processor" (Slices & Structs - The Final Boss)
+
+Goal: Combine Chapter 4 (Slices) with Chapter 5 (Structs). This is the hardest.
+
+Create a struct Document that holds a content field (String).
+
+Implement a method first_word(&self) -> &str. This method should return a slice to the first word of the content (search for the first space, just like the example in Chapter 4.3).
+
+Implement a method word_count(&self) -> usize. (Hint: use .split_whitespace() and .count()).
+
+The Crucial Test: In main:
+
+Create a Document instance.
+
+Call first_word and save the result in a variable word.
+
+Try to call a &mut self method (like clear_content) while word is still in use.
+
+Observe the compiler error. This confirms you understand how the Borrow Checker keeps your structs safe!
+
+Quick Check: What should you know by now?
+
+Before you start these, ensure you can answer these three questions:
+
+Why do we use &self instead of self in a method?
+
+What is the difference between an associated function (like String::from) and a method (like .len())?
+
+If a struct contains a String, and you assign that struct to a new variable, what happens to the data? (Hint: Move).
+==========
+
+*******************5 to 10 exercise*******************
+
+Prompt I gave:
+
+==========
+==========
+
+------------------------------------------------------
+
+Answer I got:
+
+==========
+==========
+==========
+
+*******************10 - 15 exercise*******************
+
+Prompt I gave:
+
+==========
+==========
+
+------------------------------------------------------
+
+Answer I got:
+
+==========
+==========
+==========
+
+*******************15 - 20 exercise*******************
+
+Prompt I gave:
+
+==========
+==========
+
+------------------------------------------------------
+
+Answer I got:
+
+==========
+==========
+
+*******************20 - 22 exercise*******************
+
+Prompt I gave:
+
+==========
+==========
+
+------------------------------------------------------
+
+Answer I got:
+
+==========
+==========
+
+******************************************************
